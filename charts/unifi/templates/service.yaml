@@ -11,5 +11,33 @@ spec:
       targetPort: web-admin-port
       protocol: TCP
       name: web-admin-port
+    - port: 8080
+      targetPort: controller
+      protocol: TCP
+      name: controller
+    - port: 8843
+      targetPort: portal-https
+      protocol: TCP
+      name: portal-https
+    - port: 8880
+      targetPort: portal-http
+      protocol: TCP
+      name: portal-http
+    - port: 6789
+      targetPort: speed-test
+      protocol: TCP
+      name: speed-test
+    - port: 3478
+      targetPort: stun
+      protocol: TCP
+      name: stun
+    - port: 10001
+      targetPort: discovery
+      protocol: TCP
+      name: discovery
+    - port: 5514
+      targetPort: syslog
+      protocol: TCP
+      name: syslog
   selector:
     {{- include "unifi.selectorLabels" . | nindent 4 }}
