@@ -29,15 +29,15 @@ spec:
       name: speed-test
     - port: 3478
       targetPort: stun
-      protocol: TCP
+      protocol: UDP
       name: stun
     - port: 10001
       targetPort: discovery
-      protocol: TCP
+      protocol: UDP
       name: discovery
     - port: 5514
       targetPort: syslog
-      protocol: TCP
+      protocol: UDP
       name: syslog
   selector:
     {{- include "unifi.selectorLabels" . | nindent 4 }}
